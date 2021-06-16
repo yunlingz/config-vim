@@ -1,0 +1,55 @@
+{
+  "diagnostic.errorSign": "❯",
+  "diagnostic.warningSign": "❯",
+  "diagnostic.infoSign": "❯",
+  "diagnostic.hintSign": "❯",
+  // --
+  // "diagnostic.virtualText": true,
+  // "diagnostic.virtualTextCurrentLineOnly": false,
+  // "diagnostic.virtualTextPrefix": "  ",
+  // --
+  "coc.preferences.jumpCommand": "view",
+  "coc.source.file.ignoreHidden": false,
+  "signature.preferShownAbove": false,
+  // --
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/local/bin/black",
+  "python.formatting.blackArgs": ["-l", "80"],
+  // --
+  "languageserver": {
+    "rust-lsp": {
+      "command": "/Users/ling/opt/rust-analyzer",
+      "rootPatterns": ["Cargo.toml"],
+      "filetypes": ["rust"],
+      "initializationOptions": {
+        "cargo": {
+          "loadOutDirsFromCheck": true
+        },
+        "procMacro": {
+          "enable": true
+        }
+      }
+    },
+    "clangd": {
+      "command": "/usr/local/opt/llvm/bin/clangd",
+      "args": ["--clang-tidy", "--fallback-style=google"],
+      "rootPatterns": ["compile_commands.json", "compile_flags.txt"],
+      "filetypes": ["cpp", "c"],
+      "initializationOptions": {
+        "fallbackFlags": [
+          "-xc++",
+          "-std=c++17",
+          "-pedantic",
+          "-Wall",
+          "-Wextra",
+          "-fno-exceptions",
+          "-fno-rtti",
+          "-pthread",
+          // -- custom --
+          "-I/usr/local/include",
+          "-I/usr/local/Cellar/fmt/7.1.3/include"
+        ]
+      }
+    }
+  }
+}
