@@ -36,15 +36,19 @@ set wrap
 set linebreak
 set nolist
 
-" simple gui
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-set guioptions-=e
-" disable all blinking
-set guicursor+=a:blinkon0
-set guifont=SF\ Mono:h12
+if has("gui_running")
+  " simple gui
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=e
+  " disable all blinking
+  set guicursor+=a:blinkon0
+  set guifont=SF\ Mono:h12
+  " set linespace=4
+  set lines=24 columns=80
+endif
 
 " performance config
 set timeout ttimeout timeoutlen=1000 ttimeoutlen=0
@@ -74,5 +78,6 @@ set wildignore+=*/build/*
 set wildignore+=*/target/*
 set wildignore+=*/vendor/*
 
+" cursor
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
