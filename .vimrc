@@ -30,9 +30,11 @@ call <SID>load_all('post_plugs')
 
 " update
 " ----------------------------------------------------------
-function! s:update_plugin()
-  PlugUpdate
-  PlugUpgrade
-  CocUpdate
-endfunction
-command! PU call <SID>update_plugin()
+command! PU PlugUpdate | PlugUpgrade
+
+" function! s:update_plugin()
+"   PlugUpdate
+"   PlugUpgrade
+"   CocUpdate
+" endfunction
+" command! PU call <SID>update_plugin()
