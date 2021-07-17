@@ -12,11 +12,42 @@
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
   // --
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/usr/local/bin/black",
-  "python.formatting.blackArgs": ["-l", "80"],
+  // "python.formatting.provider": "black",
+  // "python.formatting.blackPath": "/usr/local/bin/black",
+  // "python.formatting.blackArgs": ["-l", "80"],
   // --
   "languageserver": {
+    "pyright": {
+      "command": "/Users/ling/opt/npm/bin/pyright-langserver",
+      "args": ["--stdio"],
+      "rootPatterns": [
+        "setup.py",
+        "pyproject.toml",
+        "setup.cfg",
+        "requirements.txt"
+      ],
+      "filetypes": ["python"],
+      "settings": {
+        "python": {
+          "analysis": {
+            "autoSearchPaths": true,
+            "useLibraryCodeForTypes": true,
+            "diagnosticMode": "workspace"
+          }
+        }
+      }
+    },
+    "deno-lsp": {
+      "command": "/usr/local/bin/deno",
+      "args": ["lsp"],
+      "rootPatterns": ["deps.ts", "dev_deps.ts"],
+      "filetypes": ["typescript"],
+      "initializationOptions": {
+        "enable": true,
+        "lint": true,
+        "unstable": false
+      }
+    },
     "rust-lsp": {
       "command": "/Users/ling/opt/rust-analyzer",
       "rootPatterns": ["Cargo.toml"],

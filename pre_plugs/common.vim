@@ -53,7 +53,7 @@ endif
 " performance config
 set timeout ttimeout timeoutlen=1000 ttimeoutlen=0
 set lazyredraw
-set updatetime=100
+set updatetime=1000
 
 " search
 set ignorecase
