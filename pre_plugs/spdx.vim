@@ -9,12 +9,10 @@ function! s:apply_mit()
     normal! o
   endif
   " -- text begin --
-  execute 'normal! O' . 'SPDX-License-Identifier: MIT'
-  execute 'normal! o'
-  execute 'normal! o' . 'Copyright ' . year . ' ' . holder
+  execute 'normal! O' . 'Copyright ' . year . ' ' . holder . '. MIT license.'
   " -- text end --
   normal! o
-  normal! 3k0v2j$
+  normal! k0v$
   set nopaste
 endfunction
 command! MIT call <SID>apply_mit()

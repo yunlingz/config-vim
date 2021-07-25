@@ -40,8 +40,13 @@
     "deno-lsp": {
       "command": "/usr/local/bin/deno",
       "args": ["lsp"],
-      "rootPatterns": ["deps.ts", "dev_deps.ts"],
-      "filetypes": ["typescript"],
+      "rootPatterns": ["deps.ts", "dev_deps.ts", "tsconfig.json"],
+      "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "javascriptreact"
+      ],
       "initializationOptions": {
         "enable": true,
         "lint": true,
