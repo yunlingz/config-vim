@@ -18,6 +18,12 @@ let g:coc_filetype_map = {
   \ }
 command! LR CocRestart
 
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ ]
+
 " let g:coc_global_extensions = [
 "   \ 'coc-pyright',
 "   \ ]
