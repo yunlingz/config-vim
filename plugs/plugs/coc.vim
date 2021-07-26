@@ -1,6 +1,10 @@
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Plug 'neoclide/coc.nvim', { 'commit': '9be9ae' }
 
+Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
 
 nnoremap <silent> gD :call CocActionAsync('jumpDeclaration')<CR>
 nnoremap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
@@ -18,11 +22,11 @@ let g:coc_filetype_map = {
   \ }
 command! LR CocRestart
 
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-eslint',
-  \ 'coc-prettier',
-  \ ]
+" let g:coc_global_extensions = [
+"   \ 'coc-tsserver',
+"   \ 'coc-eslint',
+"   \ 'coc-prettier',
+"   \ ]
 
 " let g:coc_global_extensions = [
 "   \ 'coc-pyright',
