@@ -52,7 +52,7 @@
       }
     },
     "pyright": {
-      "command": "/Users/ling/opt/npm/bin/pyright-langserver",
+      "command": "/Users/ling/.yarn/bin/pyright-langserver",
       "args": ["--stdio"],
       "rootPatterns": [
         "setup.py",
