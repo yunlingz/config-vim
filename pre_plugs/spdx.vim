@@ -1,5 +1,5 @@
 " -- spdx --
-function! s:apply_mit()
+function! s:apply_bsd()
   set paste
   let year = strftime('%Y')
   let holder = 'Zhu Yun-ling <yunling.zhu@outlook.com>'
@@ -9,10 +9,12 @@ function! s:apply_mit()
     normal! o
   endif
   " -- text begin --
-  execute 'normal! O' . 'Copyright ' . year . ' ' . holder . '. MIT license.'
+  execute 'normal! O' . 'SPDX-License-Identifier: BSD-2-Clause'
+  execute 'normal! o'
+  execute 'normal! o' . 'Copyright ' . year . ' ' . holder
   " -- text end --
   normal! o
-  normal! k0v$
+  normal! 3k0v2j$
   set nopaste
 endfunction
-command! MIT call <SID>apply_mit()
+command! BSD call <SID>apply_bsd()
