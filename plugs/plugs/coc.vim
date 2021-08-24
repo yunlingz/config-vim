@@ -1,7 +1,7 @@
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Plug 'neoclide/coc.nvim', { 'commit': '9be9ae' }
 
-" Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 
 Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
@@ -13,7 +13,7 @@ nnoremap <silent> gi :call CocActionAsync('jumpImplementation')<CR>
 
 nnoremap <silent> K :call CocActionAsync('doHover')<CR>
 
-nnoremap <silent> <Leader>rn :call CocActionAsync('rename')<CR>
+nnoremap <silent> <Leader>r :call CocActionAsync('rename')<CR>
 nnoremap <silent> <Leader>i :call CocActionAsync('doQuickfix')<CR>
 nnoremap <silent> <Leader>f :call CocActionAsync('format')<CR>
 

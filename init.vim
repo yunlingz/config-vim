@@ -13,7 +13,7 @@ augroup cmd_once
 augroup END
 
 function! s:load_all(p)
-  for f in split(glob('~/.vim/' . a:p . '/**/*.vim'), '\n')
+  for f in split(glob(stdpath('config') . '/' . a:p . '/**/*.vim'), '\n')
     exe 'source' f
   endfor
 endfunction
@@ -22,7 +22,7 @@ endfunction
 " ----------------------------------------------------------
 call <SID>load_all('pre_plugs')
 
-call plug#begin('~/.vim_plugged')
+call plug#begin(stdpath('data') . '/plugged')
   call <SID>load_all('plugs')
 call plug#end()
 

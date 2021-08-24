@@ -36,7 +36,7 @@ set wrap
 set linebreak
 set nolist
 
-if has("gui_running")
+if has('gui_running')
   " simple gui
   set guioptions-=m
   set guioptions-=T
@@ -50,10 +50,13 @@ if has("gui_running")
   set lines=24 columns=80
 endif
 
+" nvim cursor bug fix
+autocmd cmd_once VimLeave * set guicursor=a:block-blinkon0
+
 " performance config
 set timeout ttimeout timeoutlen=1000 ttimeoutlen=0
 set lazyredraw
-set updatetime=1000
+set updatetime=100
 
 " search
 set ignorecase
@@ -78,9 +81,3 @@ set wildignore+=*/build/*
 set wildignore+=*/target/*
 set wildignore+=*/vendor/*
 
-" cursor
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
-" swap
-set directory^=$HOME/.vim/swap//

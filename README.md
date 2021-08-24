@@ -4,4 +4,4 @@
 
 # yunling.vim
 
-My vim configurations.
+Yun-ling's vim configurations.
