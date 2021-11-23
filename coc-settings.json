@@ -12,6 +12,8 @@
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
   // --
+  "eslint.packageManager": "yarn",
+  // --
   // "python.formatting.provider": "black",
   // "python.formatting.blackPath": "/usr/local/bin/black",
   // "python.formatting.blackArgs": ["-l", "80"],

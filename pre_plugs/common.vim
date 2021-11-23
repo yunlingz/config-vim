@@ -9,7 +9,7 @@ set cursorline
 set showtabline=2
 set noshowmode
 set fillchars+=vert:│
-set shortmess=I
+" set shortmess=I
 set magic
 if has('clipboard')
   if has('mac')
@@ -81,3 +81,6 @@ set wildignore+=*/build/*
 set wildignore+=*/target/*
 set wildignore+=*/vendor/*
 
+" less
+set shortmess=aI
+set cmdheight=2

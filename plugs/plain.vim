@@ -9,6 +9,7 @@ Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'chuling/meson.vim', { 'rtp': 'vim/' }
 Plug 'mattn/emmet-vim'
+Plug 'tikhomirov/vim-glsl'
 " --
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
