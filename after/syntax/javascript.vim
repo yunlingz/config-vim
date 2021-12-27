@@ -1,2 +1,2 @@
-syn clear javaScriptBraces
-syn clear javaScriptParens
+" syn clear javaScriptBraces
+" syn clear javaScriptParens

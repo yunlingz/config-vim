@@ -5,7 +5,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-loc
 
 Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
-" Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+" Plug 'fannheyward/coc-eslint', { 'branch': 'feat/eslint-8', 'do': 'yarn install --frozen-lockfile' }
 
 nnoremap <silent> gD :call CocActionAsync('jumpDeclaration')<CR>
 nnoremap <silent> gd :call CocActionAsync('jumpDefinition')<CR>
@@ -23,9 +24,9 @@ let g:coc_filetype_map = {
   \ }
 command! LR CocRestart
 
-let g:coc_global_extensions = [
-  \ 'coc-eslint8',
-  \ ]
+" let g:coc_global_extensions = [
+"   \ 'coc-eslint8',
+"   \ ]
 
 " let g:coc_global_extensions = [
 "   \ 'coc-tsserver',

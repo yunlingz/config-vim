@@ -80,6 +80,7 @@ set wildignore+=*/node_modules/*
 set wildignore+=*/build/*
 set wildignore+=*/target/*
 set wildignore+=*/vendor/*
+set wildignore+=*/dist/*
 
 " less
 set shortmess=aI

@@ -12,4 +12,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tikhomirov/vim-glsl'
 " --
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" Plug 'peitalin/vim-jsx-typescript'
+" --
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
