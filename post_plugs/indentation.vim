@@ -20,6 +20,8 @@ autocmd cmd_once FileType c,cpp setlocal comments^=:///
 " gsg
 autocmd cmd_once FileType c,cpp setlocal cinoptions=g1,h1,(0,W4,l1,N-s
 
+autocmd cmd_once FileType scss setlocal iskeyword+=@-@
+
 " -- tab indentation guide line --
 " set list lcs=tab:→\ " <- space
 
