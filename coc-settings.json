@@ -12,6 +12,9 @@
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
   // --
+  "suggest.autoTrigger": "none",
+  // "signature.enable": false,
+  // --
   "eslint.packageManager": "yarn",
   // --
   // "python.formatting.provider": "black",

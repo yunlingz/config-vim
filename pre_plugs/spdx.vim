@@ -2,7 +2,7 @@
 function! s:apply_bsd()
   set paste
   let year = strftime('%Y')
-  let holder = 'Zhu Yun-ling <yunling.zhu@outlook.com>'
+  let holder = 'Yunling Zhu <yunling.zhu@outlook.com>'
   1
   if getline(1) =~ '\m^#!'
     normal! o
