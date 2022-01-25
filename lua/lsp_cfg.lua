@@ -7,7 +7,7 @@ vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagno
 vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
 vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
 
--- Check if it's already defined for when reloading this file.
+-- check if it's already defined for when reloading this file.
 if not configs.my_clangd then
   configs.my_clangd = {
     default_config = {
@@ -34,7 +34,6 @@ if not configs.my_clangd then
     },
   }
 end
--- lspconfig.my_clangd.setup {}
 
 if not configs.my_rls then
   configs.my_rls = {
@@ -48,12 +47,11 @@ if not configs.my_rls then
     },
   }
 end
--- lspconfig.my_rls.setup {}
 
 if not configs.my_pyright then
   configs.my_pyright = {
     default_config = {
-      cmd = {'/Users/ling/opt/npm/bin/pyright-langserver', '--stdio'},
+      cmd = {'/Users/ling/.yarn/bin/pyright-langserver', '--stdio'},
       settings = {
         python = {
           analysis = {
@@ -71,7 +69,6 @@ if not configs.my_pyright then
     },
   }
 end
--- lspconfig.my_pyright.setup {}
 
 if not configs.my_deno then
   configs.my_deno = {
@@ -85,4 +82,3 @@ if not configs.my_deno then
     },
   }
 end
--- lspconfig.my_deno.setup {}
