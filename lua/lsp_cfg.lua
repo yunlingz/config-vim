@@ -1,6 +1,6 @@
-local lspconfig = require 'lspconfig'
-local configs = require 'lspconfig.configs'
-local util = require 'lspconfig.util'
+local lspconfig = require('lspconfig')
+local configs = require('lspconfig.configs')
+local util = require('lspconfig.util')
 
 vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
 vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})

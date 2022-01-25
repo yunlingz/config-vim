@@ -24,3 +24,9 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
+require('lsp_signature').setup({bind = true})
+
+-- require'lsp_signature'.setup({
+--   bind = true, -- This is mandatory, otherwise border config won't get registered.
+--   handler_opts = {border = 'rounded'},
+-- })

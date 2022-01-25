@@ -9,4 +9,4 @@ setlocal formatprg=lua-format\
   \ 2>/dev/null
 
 " mark cursor location as 'c', format entire buffer, go back to 'c'
-nnoremap <silent> <Leader>f mcgggqG`c
+nnoremap <buffer> <silent> <Leader>f mcgggqG`c
