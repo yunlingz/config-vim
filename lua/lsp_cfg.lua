@@ -100,3 +100,28 @@ if not configs.my_deno then
     },
   }
 end
+
+if not configs.my_lualsp then
+  local runtime_path = vim.split(package.path, ';')
+  table.insert(runtime_path, 'lua/?.lua')
+  table.insert(runtime_path, 'lua/?/init.lua')
+
+  configs.my_lualsp = {
+    default_config = {
+      cmd = {'lua-language-server'},
+      settings = {
+        Lua = {
+          runtime = {version = 'LuaJIT', path = runtime_path},
+          diagnostics = {globals = {'vim'}},
+          workspace = {library = vim.api.nvim_get_runtime_file('', true)},
+          telemetry = {enable = false},
+        },
+      },
+      filetypes = {'lua'},
+      root_dir = function(fname)
+        return util.root_pattern('.git')(fname) or util.path.dirname(fname)
+      end,
+    },
+  }
+end
+

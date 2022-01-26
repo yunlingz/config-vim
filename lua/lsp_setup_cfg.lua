@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
                               opts)
 
   local enable_lsp_formater = true
-  for _, ft in ipairs({'python'}) do
+  for _, ft in ipairs({'python', 'lua'}) do
     if vim.api.nvim_buf_get_option(bufnr, 'filetype') == ft then
       enable_lsp_formater = false
       break
@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
 
 end
 
-local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_deno'}
+local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_deno', 'my_lualsp'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
