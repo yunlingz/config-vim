@@ -1,4 +1,4 @@
-" inoremap <C-e> <C-o>A
+inoremap <C-e> <C-o>A
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :

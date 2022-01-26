@@ -2,16 +2,32 @@ local lspconfig = require('lspconfig')
 local configs = require('lspconfig.configs')
 local util = require('lspconfig.util')
 
-vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
-vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
-vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
-vim.fn.sign_define('LspDiagnosticsSignError', {text = '❯', texthl = 'LspDiagnosticsSignError'})
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  text = '❯',
+  texthl = 'LspDiagnosticsSignError',
+})
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  text = '❯',
+  texthl = 'LspDiagnosticsSignError',
+})
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  text = '❯',
+  texthl = 'LspDiagnosticsSignError',
+})
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  text = '❯',
+  texthl = 'LspDiagnosticsSignError',
+})
 
 -- check if it's already defined for when reloading this file.
 if not configs.my_clangd then
   configs.my_clangd = {
     default_config = {
-      cmd = {'/usr/local/opt/llvm/bin/clangd', '--clang-tidy', '--fallback-style=google'},
+      cmd = {
+        '/usr/local/opt/llvm/bin/clangd',
+        '--clang-tidy',
+        '--fallback-style=google',
+      },
       init_options = {
         fallbackFlags = {
           '-xc++',
@@ -39,7 +55,10 @@ if not configs.my_rls then
   configs.my_rls = {
     default_config = {
       cmd = {'/Users/ling/opt/rust-analyzer'},
-      init_options = {cargo = {loadOutDirsFromCheck = true}, procMacro = {enable = true}},
+      init_options = {
+        cargo = {loadOutDirsFromCheck = true},
+        procMacro = {enable = true},
+      },
       filetypes = {'rust'},
       root_dir = function(fname)
         return util.root_pattern('Cargo.toml')(fname) or util.path.dirname(fname)

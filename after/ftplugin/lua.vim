@@ -6,6 +6,9 @@ setlocal formatprg=lua-format\
   \ --chop-down-kv-table\
   \ --column-limit=100\
   \ --double-quote-to-single-quote\
+  \ --no-keep-simple-control-block-one-line\
+  \ --no-keep-simple-function-one-line\
+  \ --column-table-limit=80\
   \ 2>/dev/null
 
 " mark cursor location as 'c', format entire buffer, go back to 'c'

@@ -24,5 +24,5 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
-require('lsp_signature').setup({bind = true})
+require('lsp_signature').setup({bind = true, handler_opts = {border = 'single'}})
 
