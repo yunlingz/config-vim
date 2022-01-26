@@ -13,16 +13,30 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api
-      .nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>i', '<cmd>lua vim.lsp.buf.code_action()<CR>',
                               opts)
+
+  local enable_lsp_formater = true
+  for _, ft in ipairs({'python'}) do
+    if vim.api.nvim_buf_get_option(bufnr, 'filetype') == ft then
+      enable_lsp_formater = false
+      break
+    end
+  end
+  if enable_lsp_formater then
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>',
+                                opts)
+  end
+
 end
 
 local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_deno'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
+
+-- pyright has no formatter
+-- lspconfig['my_pyright'].setup {on_attach = on_attach, capabilities = capabilities}
 
 require('lsp_signature').setup({bind = true, handler_opts = {border = 'single'}})
 
