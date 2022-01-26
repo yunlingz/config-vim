@@ -35,8 +35,5 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
--- pyright has no formatter
--- lspconfig['my_pyright'].setup {on_attach = on_attach, capabilities = capabilities}
-
 require('lsp_signature').setup({bind = true, handler_opts = {border = 'single'}})
 
