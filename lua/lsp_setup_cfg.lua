@@ -4,7 +4,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 local opts = {noremap = true, silent = true}
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
 
 end
 
-local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_deno', 'my_lualsp'}
+local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_luals'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end

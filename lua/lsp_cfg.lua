@@ -88,25 +88,12 @@ if not configs.my_pyright then
   }
 end
 
-if not configs.my_deno then
-  configs.my_deno = {
-    default_config = {
-      cmd = {'/usr/local/bin/deno', 'lsp'},
-      init_options = {enable = true, lint = true},
-      filetypes = {'typescript'},
-      root_dir = function(fname)
-        return util.root_pattern('deps.ts')(fname) or util.path.dirname(fname)
-      end,
-    },
-  }
-end
-
-if not configs.my_lualsp then
+if not configs.my_luals then
   local runtime_path = vim.split(package.path, ';')
   table.insert(runtime_path, 'lua/?.lua')
   table.insert(runtime_path, 'lua/?/init.lua')
 
-  configs.my_lualsp = {
+  configs.my_luals = {
     default_config = {
       cmd = {'lua-language-server'},
       settings = {
