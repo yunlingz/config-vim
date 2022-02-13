@@ -7,4 +7,4 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeRespectWildIgnore = 1
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <unique> <silent> <C-n> :NERDTreeToggle<CR>

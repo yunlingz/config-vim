@@ -8,6 +8,23 @@ let g:neoformat_json_my_jsontool = {
 let g:neoformat_enabled_json = ['my_jsontool']
 
 
+" let s:my_prettier = {
+"   \ 'exe': 'prettier',
+"   \ 'args': ['--stdin-filepath', '"%:p"'],
+"   \ 'stdin': 1,
+"   \ 'try_node_exe': 1,
+"   \ }
+"
+" let g:yunlingz_ft_prettier = ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
+"   \ 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html']
+"
+" for tgt in g:yunlingz_ft_prettier
+"   execute 'let g:neoformat_' . tgt . '_my_prettier = s:my_prettier'
+"   execute 'let g:neoformat_enabled_' . tgt . ' = ["my_prettier"]'
+"   execute 'autocmd cmd_once FileType ' . tgt . ' nnoremap <buffer><silent><unique> <Leader>f :Neoformat<CR>'
+" endfor
+
+
 let g:neoformat_python_my_black = {
   \ 'exe': 'black',
   \ 'args': ['-l', '80', '-q', '-'],
@@ -38,4 +55,4 @@ let g:neoformat_enabled_lua = ['my_luaformat']
 
 autocmd cmd_once FileType
   \ json,python,lua
-  \ nnoremap <buffer><silent><unique> <Leader>f :Neoformat<CR>
+  \ nnoremap <unique> <buffer><silent> <Leader>f :Neoformat<CR>

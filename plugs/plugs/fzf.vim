@@ -1,8 +1,8 @@
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-nnoremap <silent> <C-p> :Files<Cr>
-nnoremap <silent> <C-g> :Rg<Cr>
+nnoremap <unique> <silent> <C-p> :Files<Cr>
+nnoremap <unique> <silent> <C-g> :Rg<Cr>
 
 " use rg
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
