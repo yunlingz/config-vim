@@ -1,5 +1,6 @@
 " themes
-Plug 'yunlingz/ci_dark'
+" Plug 'yunlingz/ci_dark'
+Plug 'yunlingz/vsc-dark-plus-vim'
 
 " edit tools
 Plug 'tpope/vim-surround'

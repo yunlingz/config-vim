@@ -27,7 +27,7 @@ let g:neoformat_enabled_json = ['my_jsontool']
 
 let g:neoformat_python_my_black = {
   \ 'exe': 'black',
-  \ 'args': ['-l', '80', '-q', '-'],
+  \ 'args': ['-l', '80', '-S', '-q', '-'],
   \ 'stdin': 1,
   \ }
 
