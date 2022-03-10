@@ -2,7 +2,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 let g:lightline = {
-  \ 'colorscheme': 'vsc_dark_plus',
   \ 'separator': { 'left': '', 'right': '' },
   \ 'subseparator': { 'left': '', 'right': '' },
   \ 'component': { 'lineinfo': '%3l:%-2v' },
