@@ -42,10 +42,8 @@ if not configs.my_clangd then
         },
       },
       filetypes = {'cpp', 'c'},
-      root_dir = function(fname)
-        return util.root_pattern('compile_commands.json', 'compile_flags.txt')(fname) or
-                   util.path.dirname(fname)
-      end,
+      root_dir = util.root_pattern('compile_commands.json', 'compile_flags.txt'),
+      single_file_support = true,
     },
   }
 end
@@ -59,9 +57,7 @@ if not configs.my_rls then
         procMacro = {enable = true},
       },
       filetypes = {'rust'},
-      root_dir = function(fname)
-        return util.root_pattern('Cargo.toml')(fname) or util.path.dirname(fname)
-      end,
+      root_dir = util.root_pattern('Cargo.toml'),
     },
   }
 end
@@ -80,10 +76,9 @@ if not configs.my_pyright then
         },
       },
       filetypes = {'python'},
-      root_dir = function(fname)
-        return util.root_pattern('setup.py', 'pyproject.toml', 'setup.cfg', 'requirements.txt',
-                                 '.git')(fname) or util.path.dirname(fname)
-      end,
+      root_dir = util.root_pattern('pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt',
+                                   'Pipfile', 'pyrightconfig.json'),
+      single_file_support = true,
     },
   }
 end
@@ -105,9 +100,8 @@ if not configs.my_luals then
         },
       },
       filetypes = {'lua'},
-      root_dir = function(fname)
-        return util.root_pattern('.git')(fname) or util.path.dirname(fname)
-      end,
+      root_dir = util.find_git_ancestor,
+      single_file_support = true,
     },
   }
 end
