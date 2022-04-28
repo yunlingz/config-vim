@@ -53,5 +53,5 @@ endfunction
 " -- special indentation --
 call <SID>space_indent(4, 'rust', 'python')
 " --
-call <SID>tab_indent(8, 'make', 'gitconfig', 'c')
+call <SID>tab_indent(8, 'make', 'gitconfig')
 call <SID>tab_indent(2, 'go')
