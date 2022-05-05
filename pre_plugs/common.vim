@@ -23,7 +23,7 @@ endif
 set hidden
 set shortmess+=c
 set signcolumn=yes
-set completeopt=noinsert,menuone,noselect
+set completeopt=menuone,noinsert,noselect
 
 " disable beeping
 set noerrorbells visualbell t_vb=
