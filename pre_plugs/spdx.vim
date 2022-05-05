@@ -4,7 +4,8 @@ function! s:apply_bsd()
   let year = strftime('%Y')
   let holder = 'Yunling Zhu <yunling.zhu@outlook.com>'
   1
-  if getline(1) =~ '\m^#!'
+  let first_line = getline(1)
+  if first_line =~ '\m^#!' || first_line == "'use strict';" || first_line == '"use strict";'
     normal! o
     normal! o
   endif
