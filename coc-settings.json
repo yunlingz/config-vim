@@ -12,7 +12,7 @@
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
   // --
-  "suggest.autoTrigger": "none",
+  // "suggest.autoTrigger": "none",
   // "signature.enable": false,
   // --
   "eslint.packageManager": "yarn",
@@ -52,7 +52,7 @@
           "-pthread",
           // -- custom --
           "-I/usr/local/include",
-          "-I/usr/local/Cellar/fmt/7.1.3/include"
+          "-I/usr/local/Cellar/fmt/8.1.1_1/include"
         ]
       }
     },
@@ -60,10 +60,12 @@
       "command": "/Users/ling/.yarn/bin/pyright-langserver",
       "args": ["--stdio"],
       "rootPatterns": [
-        "setup.py",
         "pyproject.toml",
+        "setup.py",
         "setup.cfg",
-        "requirements.txt"
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json"
       ],
       "filetypes": ["python"],
       "settings": {
@@ -76,21 +78,5 @@
         }
       }
     }
-    // "deno-lsp": {
-    //   "command": "/usr/local/bin/deno",
-    //   "args": ["lsp"],
-    //   "rootPatterns": ["deps.ts", "dev_deps.ts", "tsconfig.json"],
-    //   "filetypes": [
-    //     "typescript",
-    //     "typescriptreact",
-    //     "javascript",
-    //     "javascriptreact"
-    //   ],
-    //   "initializationOptions": {
-    //     "enable": true,
-    //     "lint": true,
-    //     "unstable": false
-    //   }
-    // }
   }
 }

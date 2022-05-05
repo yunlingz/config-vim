@@ -54,5 +54,5 @@ let g:neoformat_enabled_lua = ['my_luaformat']
 
 
 autocmd cmd_once FileType
-  \ json,python,lua
-  \ nnoremap <unique> <buffer><silent> <Leader>f :Neoformat<CR>
+  \ python,lua
+  \ nnoremap <unique> <buffer><silent> <Leader>ff :Neoformat<CR>
