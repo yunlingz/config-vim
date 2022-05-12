@@ -17,8 +17,6 @@
   // --
   "eslint.packageManager": "yarn",
   // --
-  "prettier.singleQuote": true,
-  // --
   // "python.formatting.provider": "black",
   // "python.formatting.blackPath": "/usr/local/bin/black",
   // "python.formatting.blackArgs": ["-l", "80"],
