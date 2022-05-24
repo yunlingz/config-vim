@@ -11,8 +11,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'chuling/meson.vim', { 'rtp': 'vim/' }
 Plug 'mattn/emmet-vim'
 Plug 'tikhomirov/vim-glsl'
+Plug 'neoclide/jsonc.vim'
 " --
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 " Plug 'peitalin/vim-jsx-typescript'
 " --
 Plug 'yuezk/vim-js'

@@ -3,8 +3,19 @@ Plug 'junegunn/goyo.vim'
 let g:goyo_width = 85
 let g:goyo_height = '95%'
 let g:goyo_linenr = 1
-nnoremap <unique> <silent> <Leader>g :Goyo<CR>
-" nnoremap <unique> <silent> <Leader>g :call <SID>auto_goyo_width()<CR>
+" nnoremap <unique> <silent> <Leader>g :Goyo<CR>
+nnoremap <unique> <silent> <Leader>g :call <SID>auto_goyo_width()<CR>
+function! s:auto_goyo_width()
+  if exists('#goyo')
+    Goyo!
+    call tab_guide#render()
+    return
+  endif
+  " --
+  Goyo
+  call tab_guide#render()
+endfunction
+
 " function! s:auto_goyo_width()
 "   if exists('#goyo')
 "     Goyo!

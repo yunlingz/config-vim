@@ -11,3 +11,5 @@ let g:lightline.colorscheme = 'ci_dark'
 " colorscheme vsc_dark_plus
 " let g:airline_theme = 'vsc_dark_plus'
 " let g:lightline.colorscheme = 'vsc_dark_plus'
+
+call tab_guide#render()
