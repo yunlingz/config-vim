@@ -53,6 +53,20 @@ let g:neoformat_lua_my_luaformat = {
 let g:neoformat_enabled_lua = ['my_luaformat']
 
 
-autocmd cmd_once FileType
-  \ python,lua
-  \ nnoremap <unique> <buffer><silent> <Leader>ff :Neoformat<CR>
+let g:neoformat_js_my_luaformat = {
+  \ 'exe': 'lua-format',
+  \ 'args': [
+    \ '--indent-width=2',
+    \ '--continuation-indent-width=4',
+    \ '--extra-sep-at-table-end',
+    \ '--chop-down-table',
+    \ '--chop-down-kv-table',
+    \ '--column-limit=100',
+    \ '--double-quote-to-single-quote',
+    \ '--no-keep-simple-control-block-one-line',
+    \ '--no-keep-simple-function-one-line',
+    \ '--column-table-limit=80',
+    \ ],
+  \ }
+
+let g:neoformat_enabled_lua = ['my_luaformat']

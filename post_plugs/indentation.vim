@@ -20,6 +20,9 @@ autocmd cmd_once FileType c,cpp setlocal comments^=:///
 " gsg
 autocmd cmd_once FileType c,cpp setlocal cinoptions=g1,h1,(0,W4,l1,N-s
 
+" gnu
+" autocmd cmd_once FileType c,cpp setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+
 autocmd cmd_once FileType scss setlocal iskeyword+=@-@
 
 " -- tab indentation guide line --
@@ -56,4 +59,3 @@ call <SID>space_indent(4, 'rust', 'python')
 " --
 call <SID>tab_indent(8, 'make', 'gitconfig')
 call <SID>tab_indent(2, 'go')
-call <SID>tab_indent(4, 'rust', 'typescript')

@@ -12,7 +12,7 @@
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
   // --
-  "suggest.autoTrigger": "none",
+  // "suggest.autoTrigger": "none",
   // "signature.enable": false,
   // --
   "eslint.packageManager": "yarn",
@@ -77,6 +77,13 @@
           }
         }
       }
+    },
+    "rescript": {
+      "enable": true,
+      "module": "~/.local/share/nvim/plugged/vim-rescript/server/out/server.js",
+      "args": ["--node-ipc"],
+      "filetypes": ["rescript"],
+      "rootPatterns": ["bsconfig.json"]
     }
   }
 }
