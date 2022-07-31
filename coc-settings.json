@@ -23,7 +23,7 @@
   // --
   "languageserver": {
     "rust-lsp": {
-      "command": "/Users/ling/opt/rust-analyzer",
+      "command": "/Users/yunlingzhu/opt/rust-analyzer/rust-analyzer",
       "rootPatterns": ["Cargo.toml"],
       "filetypes": ["rust"],
       "initializationOptions": {
@@ -57,7 +57,7 @@
       }
     },
     "pyright": {
-      "command": "/Users/ling/.yarn/bin/pyright-langserver",
+      "command": "/Users/yunlingzhu/.yarn/bin/pyright-langserver",
       "args": ["--stdio"],
       "rootPatterns": [
         "pyproject.toml",
@@ -77,13 +77,6 @@
           }
         }
       }
-    },
-    "rescript": {
-      "enable": true,
-      "module": "~/.local/share/nvim/plugged/vim-rescript/server/out/server.js",
-      "args": ["--node-ipc"],
-      "filetypes": ["rescript"],
-      "rootPatterns": ["bsconfig.json"]
     }
   }
 }
