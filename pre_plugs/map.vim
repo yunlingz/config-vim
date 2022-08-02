@@ -1,4 +1,6 @@
-inoremap <unique> <C-e> <C-o>A
+" already mapped in cmp_cfg.lua
+" inoremap <unique> <C-e> <C-o>A
+
 nnoremap <unique> ; :
 nnoremap <unique> : ;
 vnoremap <unique> ; :

@@ -1,5 +1,7 @@
 Plug 'sbdchd/neoformat'
 
+autocmd cmd_once FileType python,lua nnoremap <buffer><silent><unique> <Leader>f :Neoformat<CR>
+
 let g:neoformat_json_my_jsontool = {
   \ 'exe': 'python3',
   \ 'args': ['-m', 'json.tool', '--indent', '2'],
@@ -19,10 +21,9 @@ let g:neoformat_enabled_json = ['my_jsontool']
 "   \ 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html']
 "
 " for tgt in g:yunlingz_ft_prettier
-"   execute 'let g:neoformat_' . tgt . '_my_prettier = s:my_prettier'
-"   execute 'let g:neoformat_enabled_' . tgt . ' = ["my_prettier"]'
 "   execute 'autocmd cmd_once FileType ' . tgt . ' nnoremap <buffer><silent><unique> <Leader>f :Neoformat<CR>'
 " endfor
+
 
 
 let g:neoformat_python_my_black = {

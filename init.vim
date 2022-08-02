@@ -38,3 +38,7 @@ command! PU PlugUpdate | PlugUpgrade
 "   CocUpdate
 " endfunction
 " command! PU call <SID>update_plugin()
+
+lua require('lsp_cfg')
+lua require('lsp_setup_cfg')
+lua require('cmp_cfg')
