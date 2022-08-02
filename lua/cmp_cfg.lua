@@ -20,8 +20,8 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
-    -- ['<C-e>'] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.abort()}),
 
+    -- ['<C-e>'] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.abort()}),
     ['<C-e>'] = cmp.mapping({
       i = function()
         if cmp.visible() then
@@ -34,17 +34,6 @@ cmp.setup({
     }),
 
     ['<CR>'] = cmp.mapping.confirm({select = true}),
-    -- ['<CR>'] = cmp.mapping({
-    --   i = function(fallback)
-    --     if cmp.visible() then
-    --       cmp.confirm({select = true})
-    --     else
-    --       -- fallback()
-    --       feedkey('<Plug>delimitMateCR', '')
-    --     end
-    --   end,
-    --   c = cmp.mapping.confirm({select = true}),
-    -- }),
 
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
