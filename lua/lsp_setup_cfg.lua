@@ -30,7 +30,12 @@ local on_attach = function(_, bufnr)
 
 end
 
-local servers = {'my_clangd', 'my_rls', 'my_pyright', 'my_luals'}
+local servers = {
+  'my_clangd',
+  'my_rls',
+  'my_pyright',
+  -- 'my_luals',
+}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end

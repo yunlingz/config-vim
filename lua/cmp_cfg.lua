@@ -34,6 +34,17 @@ cmp.setup({
     }),
 
     ['<CR>'] = cmp.mapping.confirm({select = true}),
+    -- ['<CR>'] = cmp.mapping({
+    --   i = function(fallback)
+    --     if cmp.visible() then
+    --       cmp.confirm({select = true})
+    --     else
+    --       -- fallback()
+    --       feedkey('<Plug>delimitMateCR', '')
+    --     end
+    --   end,
+    --   c = cmp.mapping.confirm({select = true}),
+    -- }),
 
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then

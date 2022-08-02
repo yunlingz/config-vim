@@ -83,25 +83,25 @@ if not configs.my_pyright then
   }
 end
 
-if not configs.my_luals then
-  local runtime_path = vim.split(package.path, ';')
-  table.insert(runtime_path, 'lua/?.lua')
-  table.insert(runtime_path, 'lua/?/init.lua')
-
-  configs.my_luals = {
-    default_config = {
-      cmd = {'lua-language-server'},
-      settings = {
-        Lua = {
-          runtime = {version = 'LuaJIT', path = runtime_path},
-          diagnostics = {globals = {'vim'}},
-          workspace = {library = vim.api.nvim_get_runtime_file('', true)},
-          telemetry = {enable = false},
-        },
-      },
-      filetypes = {'lua'},
-      root_dir = util.find_git_ancestor,
-      single_file_support = true,
-    },
-  }
-end
+-- if not configs.my_luals then
+--   local runtime_path = vim.split(package.path, ';')
+--   table.insert(runtime_path, 'lua/?.lua')
+--   table.insert(runtime_path, 'lua/?/init.lua')
+--
+--   configs.my_luals = {
+--     default_config = {
+--       cmd = {'lua-language-server'},
+--       settings = {
+--         Lua = {
+--           runtime = {version = 'LuaJIT', path = runtime_path},
+--           diagnostics = {globals = {'vim'}},
+--           workspace = {library = vim.api.nvim_get_runtime_file('', true)},
+--           telemetry = {enable = false},
+--         },
+--       },
+--       filetypes = {'lua'},
+--       root_dir = util.find_git_ancestor,
+--       single_file_support = true,
+--     },
+--   }
+-- end
