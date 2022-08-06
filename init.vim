@@ -42,3 +42,4 @@ command! PU PlugUpdate | PlugUpgrade
 lua require('lsp_cfg')
 lua require('lsp_setup_cfg')
 lua require('cmp_cfg')
+lua require('toggleterm_setup_cfg')

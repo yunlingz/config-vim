@@ -17,7 +17,7 @@ local on_attach = function(_, bufnr)
                               opts)
 
   local enable_lsp_formater = true
-  for _, ft in ipairs({'python', 'lua'}) do
+  for _, ft in ipairs({'python', 'lua', 'json'}) do
     if vim.api.nvim_buf_get_option(bufnr, 'filetype') == ft then
       enable_lsp_formater = false
       break
