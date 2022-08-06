@@ -32,3 +32,16 @@ nmap <unique> <Leader>6 <Plug>lightline#bufferline#go(6)
 nmap <unique> <Leader>7 <Plug>lightline#bufferline#go(7)
 nmap <unique> <Leader>8 <Plug>lightline#bufferline#go(8)
 nmap <unique> <Leader>9 <Plug>lightline#bufferline#go(9)
+
+let g:lightline.component_function = {
+  \ 'mode': 'TerminalActiveStatus',
+  \ }
+
+function! TerminalActiveStatus()
+  let num = v:lua.num_of_terminal_active()
+  let term_expr = ''
+  if num > 0
+    let term_expr = ' [TERM: ' . num . ']'
+  endif
+  return lightline#mode() . term_expr
+endfunction

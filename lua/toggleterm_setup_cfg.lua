@@ -13,3 +13,7 @@ require('toggleterm').setup {
   shade_terminals = false,
   open_mapping = [[<C-\>]],
 }
+
+_G.num_of_terminal_active = function()
+  return #require('toggleterm.terminal').get_all()
+end
