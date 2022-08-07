@@ -38,10 +38,7 @@ let g:lightline.component_function = {
   \ }
 
 function! TerminalActiveStatus()
-  let num = v:lua.num_of_terminal_active()
-  let term_expr = ''
-  if num > 0
-    let term_expr = ' [TERM: ' . num . ']'
-  endif
-  return lightline#mode() . term_expr
+  let status = v:lua.status_of_terminal_active()
+  let curr = v:lua.status_terminal_id_current()
+  return lightline#mode() . status . curr
 endfunction
