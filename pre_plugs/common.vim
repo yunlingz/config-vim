@@ -45,9 +45,18 @@ if has('gui_running')
   set guioptions-=e
   " disable all blinking
   set guicursor+=a:blinkon0
-  set guifont=Roboto\ Mono:h12
+  set guifont=SF\ Mono:h12
   " set linespace=4
   set lines=24 columns=80
+endif
+
+if exists("g:neovide")
+  " disable all blinking
+  set guifont=SF\ Mono:h12
+  let g:neovide_no_idle = v:true
+  " let g:neovide_cursor_animation_length = 0
+  " let g:neovide_refresh_rate = 60
+  let g:neovide_fullscreen = v:true
 endif
 
 " nvim cursor bug fix
