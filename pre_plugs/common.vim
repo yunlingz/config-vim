@@ -50,15 +50,6 @@ if has('gui_running')
   set lines=24 columns=80
 endif
 
-if exists("g:neovide")
-  " disable all blinking
-  set guifont=SF\ Mono:h12
-  let g:neovide_no_idle = v:true
-  " let g:neovide_cursor_animation_length = 0
-  " let g:neovide_refresh_rate = 60
-  let g:neovide_fullscreen = v:true
-endif
-
 " nvim cursor bug fix
 autocmd cmd_once VimLeave * set guicursor=a:block-blinkon0
 

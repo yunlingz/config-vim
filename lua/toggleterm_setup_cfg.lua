@@ -50,6 +50,8 @@ require('toggleterm').setup {
   shade_terminals = false,
   open_mapping = [[<C-\>]],
 
+  highlights = {FloatBorder = {guifg = '#73e3ff', guibg = 'NONE'}},
+
   on_open = function(term)
     _G.terminal_id_set[term.id] = true
     _G.terminal_id_current = term.id
