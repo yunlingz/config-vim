@@ -83,6 +83,23 @@ if not configs.my_pyright then
   }
 end
 
+if not configs.my_tsserver then
+  configs.my_tsserver = {
+    default_config = {
+      cmd = {'typescript-language-server', '--stdio'},
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'javascript.jsx',
+        'typescript',
+        'typescriptreact',
+        'typescript.tsx',
+      },
+      root_dir = util.root_pattern('package.json'),
+    },
+  }
+end
+
 -- if not configs.my_luals then
 --   local runtime_path = vim.split(package.path, ';')
 --   table.insert(runtime_path, 'lua/?.lua')

@@ -45,7 +45,7 @@ if has('gui_running')
   set guioptions-=e
   " disable all blinking
   set guicursor+=a:blinkon0
-  set guifont=SF\ Mono:h12
+  set guifont=IBM\ Plex\ Mono:h12
   " set linespace=4
   set lines=24 columns=80
 endif

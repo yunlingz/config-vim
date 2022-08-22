@@ -60,6 +60,8 @@ cmp.setup({
   sources = cmp.config.sources({{name = 'nvim_lsp'}, {name = 'vsnip'}}, {
     {name = 'buffer'},
   }, {{name = 'path'}}),
+
+  -- completion = {autocomplete = false},
 })
 
 cmp.setup.cmdline('/', {sources = {{name = 'buffer'}}})
