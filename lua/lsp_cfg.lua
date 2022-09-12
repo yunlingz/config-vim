@@ -100,6 +100,18 @@ if not configs.my_tsserver then
   }
 end
 
+if not configs.my_hls then
+  configs.my_hls = {
+    default_config = {
+      cmd = {'haskell-language-server-wrapper', '--lsp'},
+      filetypes = {'haskell', 'lhaskell'},
+      root_dir = util.root_pattern('*.cabal', 'stack.yaml', 'cabal.project', 'package.yaml',
+                                   'hie.yaml'),
+      single_file_support = true,
+    },
+  }
+end
+
 -- if not configs.my_luals then
 --   local runtime_path = vim.split(package.path, ';')
 --   table.insert(runtime_path, 'lua/?.lua')

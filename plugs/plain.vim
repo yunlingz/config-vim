@@ -17,6 +17,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'neoclide/jsonc.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'neovimhaskell/haskell-vim'
 " --
 " Plug 'leafgarland/typescript-vim'
 " Plug 'peitalin/vim-jsx-typescript'
