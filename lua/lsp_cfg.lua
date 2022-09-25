@@ -83,30 +83,37 @@ if not configs.my_pyright then
   }
 end
 
-if not configs.my_tsserver then
-  configs.my_tsserver = {
-    default_config = {
-      cmd = {'typescript-language-server', '--stdio'},
-      filetypes = {
-        'javascript',
-        'javascriptreact',
-        'javascript.jsx',
-        'typescript',
-        'typescriptreact',
-        'typescript.tsx',
-      },
-      root_dir = util.root_pattern('package.json'),
-    },
-  }
-end
+-- if not configs.my_tsserver then
+--   configs.my_tsserver = {
+--     default_config = {
+--       cmd = {'typescript-language-server', '--stdio'},
+--       filetypes = {
+--         'javascript',
+--         'javascriptreact',
+--         'javascript.jsx',
+--         'typescript',
+--         'typescriptreact',
+--         'typescript.tsx',
+--       },
+--       root_dir = util.root_pattern('package.json'),
+--     },
+--   }
+-- end
 
-if not configs.my_hls then
-  configs.my_hls = {
+if not configs.my_ocamllsp then
+  configs.my_ocamllsp = {
     default_config = {
-      cmd = {'haskell-language-server-wrapper', '--lsp'},
-      filetypes = {'haskell', 'lhaskell'},
-      root_dir = util.root_pattern('*.cabal', 'stack.yaml', 'cabal.project', 'package.yaml',
-                                   'hie.yaml'),
+      cmd = {'ocamllsp'},
+      filetypes = {
+        'ocaml',
+        'ocaml.menhir',
+        'ocaml.interface',
+        'ocaml.ocamllex',
+        'reason',
+        'dune',
+      },
+      root_dir = util.root_pattern('*.opam', 'dune-project', 'dune-workspace'),
+
       single_file_support = true,
     },
   }

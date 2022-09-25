@@ -35,8 +35,9 @@ local servers = {
   'my_clangd',
   'my_rls',
   'my_pyright',
-  'my_tsserver',
-  'my_hls',
+  'my_ocamllsp',
+  -- 'my_tsserver',
+  -- 'my_hls',
   -- 'my_luals',
 }
 for _, lsp in ipairs(servers) do
