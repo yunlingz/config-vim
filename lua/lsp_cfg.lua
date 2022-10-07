@@ -100,24 +100,22 @@ end
 --   }
 -- end
 
-if not configs.my_ocamllsp then
-  configs.my_ocamllsp = {
-    default_config = {
-      cmd = {'ocamllsp'},
-      filetypes = {
-        'ocaml',
-        'ocaml.menhir',
-        'ocaml.interface',
-        'ocaml.ocamllex',
-        'reason',
-        'dune',
-      },
-      root_dir = util.root_pattern('*.opam', 'dune-project', 'dune-workspace'),
-
-      single_file_support = true,
-    },
-  }
-end
+-- if not configs.my_ocamllsp then
+--   configs.my_ocamllsp = {
+--     default_config = {
+--       cmd = {'ocamllsp'},
+--       filetypes = {
+--         'ocaml',
+--         'ocaml.menhir',
+--         'ocaml.interface',
+--         'ocaml.ocamllex',
+--         'reason',
+--         'dune',
+--       },
+--       root_dir = util.root_pattern('dune-project'),
+--     },
+--   }
+-- end
 
 -- if not configs.my_luals then
 --   local runtime_path = vim.split(package.path, ';')
