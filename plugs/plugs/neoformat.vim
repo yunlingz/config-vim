@@ -1,14 +1,14 @@
 Plug 'sbdchd/neoformat'
 
-autocmd cmd_once FileType python,lua,json
+autocmd cmd_once FileType python,lua
   \ nnoremap <buffer><silent><unique> <Leader>f :Neoformat<CR>
 
-let g:neoformat_json_my_jsontool = {
-  \ 'exe': 'python3',
-  \ 'args': ['-m', 'json.tool', '--indent', '2'],
-  \ }
-
-let g:neoformat_enabled_json = ['my_jsontool']
+" let g:neoformat_json_my_jsontool = {
+"   \ 'exe': 'python3',
+"   \ 'args': ['-m', 'json.tool', '--indent', '2'],
+"   \ }
+"
+" let g:neoformat_enabled_json = ['my_jsontool']
 
 
 " let s:my_prettier = {

@@ -39,7 +39,4 @@ command! PU PlugUpdate | PlugUpgrade
 " endfunction
 " command! PU call <SID>update_plugin()
 
-lua require('lsp_cfg')
-lua require('lsp_setup_cfg')
-lua require('cmp_cfg')
 lua require('toggleterm_setup_cfg')
