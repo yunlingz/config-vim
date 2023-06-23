@@ -40,18 +40,22 @@ let g:coc_filetype_map = {
   \ }
 command! LR CocRestart
 
-inoremap <unique> <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-  \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <unique> <silent><expr> <TAB>
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ <SID>check_back_space() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1] =~# '\s'
-" endfunction
-"
-" inoremap <silent><expr> <Tab>
-"   \ pumvisible() ? '<C-n>' :
-"   \ <SID>check_back_space() ? '<Tab>' :
-"   \ coc#refresh()
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <unique> <silent><expr> <CR>
+  \ coc#pum#visible() ? coc#pum#confirm() :
+  \ "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " -----------------------------------------------------
 
