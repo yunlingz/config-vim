@@ -1,6 +1,6 @@
 Plug 'preservim/tagbar', { 'on': 'TagbarToggle' }
 
-nnoremap <unique> <silent> <F8> :TagbarToggle<CR>
+nnoremap <unique> <silent> <F9> :TagbarToggle<CR>
 
 let g:tagbar_type_typescriptreact = {
   \ 'ctagstype': 'typescript',

@@ -48,7 +48,7 @@ require('toggleterm').setup {
     winblend = 0,
   },
   shade_terminals = false,
-  open_mapping = [[<C-\>]],
+  open_mapping = [[<C-'>]],
 
   highlights = {FloatBorder = {guifg = '#73e3ff', guibg = 'NONE'}},
 

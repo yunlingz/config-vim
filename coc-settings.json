@@ -11,11 +11,15 @@
   "coc.preferences.jumpCommand": "view",
   "coc.source.file.ignoreHidden": false,
   "signature.preferShownAbove": false,
+  "signature.triggerSignatureWait": 5000,
+  "list.signOffset": 99999,
   // --
   // "suggest.autoTrigger": "none",
   // "signature.enable": false,
   // --
   "eslint.packageManager": "yarn",
+  // --
+  "tsserver.maxTsServerMemory": 5120,
   // --
   // "python.formatting.provider": "black",
   // "python.formatting.blackPath": "/usr/local/bin/black",

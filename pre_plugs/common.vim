@@ -12,7 +12,7 @@ set fillchars+=vert:│
 " set shortmess=I
 set magic
 if has('clipboard')
-  if has('mac')
+  if has('mac') || has('win32')
     set clipboard+=unnamed
   elseif has('unix')
     set clipboard+=unnamedplus
