@@ -56,7 +56,7 @@ autocmd cmd_once VimLeave * set guicursor=a:block-blinkon0
 " performance config
 set timeout ttimeout timeoutlen=1000 ttimeoutlen=0
 set lazyredraw
-set updatetime=100
+set updatetime=250
 
 " search
 set ignorecase

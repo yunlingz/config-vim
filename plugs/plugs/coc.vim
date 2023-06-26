@@ -12,7 +12,11 @@ Plug 'neoclide/coc-css', { 'do': 'yarn install --frozen-lockfile' }
 
 nnoremap <unique> <silent> gD :call CocActionAsync('jumpDeclaration')<CR>
 nnoremap <unique> <silent> gd :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <unique> <silent> gy :call CocActionAsync('jumpTypeDefinition')<CR>
+
 nnoremap <unique> <silent> gi :call CocActionAsync('jumpImplementation')<CR>
+
+nnoremap <unique> <silent> gr :call CocActionAsync('jumpReferences')<CR>
 
 nnoremap <unique> <silent> K :call CocActionAsync('doHover')<CR>
 
