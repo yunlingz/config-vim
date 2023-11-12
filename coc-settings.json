@@ -43,7 +43,7 @@
       "command": "/usr/local/opt/llvm/bin/clangd",
       "args": ["--clang-tidy", "--fallback-style=google"],
       "rootPatterns": ["compile_commands.json", "compile_flags.txt"],
-      "filetypes": ["cpp", "c"],
+      "filetypes": ["cpp", "c", "objc", "objcpp"],
       "initializationOptions": {
         "fallbackFlags": [
           "-xc++",
